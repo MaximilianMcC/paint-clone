@@ -9,9 +9,15 @@ class Program
 
 		Canvas.Start();
 
+		// Register all the tools
+		// TODO: Do this another way (maybe dynamic)
+		ToolHandler.Tools.Add(new MoveTool());
+		ToolHandler.Tools.Add(new BrushTool());
+
 		while (Raylib.WindowShouldClose() == false)
 		{
 			Canvas.Update();
+			ToolHandler.Update();
 
 			Raylib.ClearBackground(Color.Black);
 			Raylib.BeginDrawing();

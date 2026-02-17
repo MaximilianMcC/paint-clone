@@ -12,10 +12,6 @@ class Canvas
 		ActualCanvas = Raylib.LoadRenderTexture(1920, 1080);
 		Raylib.BeginTextureMode(ActualCanvas);
 		Raylib.ClearBackground(Color.White);
-
-		//! Draw a debug dot in the centre of the canvas
-		Raylib.DrawCircleV(ActualCanvas.Texture.Dimensions, 5f, Color.Magenta);
-		
 		Raylib.EndTextureMode();
 
 		// Make the camera
